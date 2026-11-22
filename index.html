@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,184 +6,702 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="canonical" href="https://hammad-ahmed-afridi.github.io/" />
+  <!-- Materialize -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <title>Hammad Ahmed Afridi | Information Security Student</title>
 
-  <!-- Open Graph-->
+  <!-- Open Graph -->
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Hammad Ahmed Afridi | Information Security Student" />
   <meta property="og:description" content="BE Information Security student at MCS, NUST" />
   <meta property="og:url" content="https://hammad-ahmed-afridi.github.io/" />
   <meta property="og:site_name" content="Hammad Ahmed Afridi | Information Security Student" />
-  <meta property="article:publisher" content="https://hammad-ahmed-afridi.github.io/" />
   <meta name="author" content="Hammad Ahmed Afridi" />
   <meta name="description" content="BE Information Security student at MCS, NUST, 3rd semester." />
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="/assets/img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="theme-color" content="#00695c" />
   <meta name="robots" content="index, follow" />
+
+  <style>
+    /* ========== BASE ========== */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #2d3748;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      background: #f7fafc;
+      margin: 0;
+    }
+
+    a {
+      color: #00695c;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #004d40;
+    }
+
+    /* ========== NAVIGATION ========== */
+    nav {
+      background: transparent !important;
+      box-shadow: none !important;
+      height: 0 !important;
+    }
+
+    ul.side-nav {
+      width: 210px !important;
+      background: #ffffff;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, 0.06);
+    }
+
+    ul.side-nav.fixed a {
+      box-sizing: border-box;
+      color: #2d3748 !important;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.2;
+      padding: 14px 20px !important;
+      font-weight: 500;
+      font-size: 15px;
+      border-left: 3px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    ul.side-nav.fixed a:hover,
+    ul.table-of-contents li:not(.logo) a.active {
+      background-color: #e0f2f1 !important;
+      border-left: 3px solid #00695c !important;
+      color: #00695c !important;
+    }
+
+    ul.side-nav.fixed a i {
+      color: #00695c;
+      font-size: 20px;
+    }
+
+    ul.side-nav.fixed li.logo {
+      background: linear-gradient(145deg, #e0f2f1, #b2dfdb);
+      border-bottom: 1px solid #e0e0e0;
+      padding: 28px 20px 32px;
+      text-align: center;
+      min-height: auto;
+    }
+
+    ul.side-nav.fixed li.logo a {
+      border: none !important;
+      padding: 0 !important;
+      justify-content: center;
+    }
+
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #ffffff;
+      box-shadow: 0 6px 20px rgba(0, 105, 92, 0.25);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
+    /* Mobile top bar */
+    nav.hide-on-large-only.trigger {
+      background: #ffffff !important;
+      height: 60px !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    nav.hide-on-large-only.trigger .button-collapse {
+      color: #00695c !important;
+      height: 60px;
+      line-height: 60px;
+      margin-left: 8px;
+    }
+
+    .name-title {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+    }
+
+    .name-title a {
+      font-size: 17px;
+      font-weight: 600;
+      color: #00695c !important;
+      line-height: 1.2;
+      pointer-events: auto;
+    }
+
+    .name-title span {
+      font-size: 12px;
+      color: #718096;
+      margin-top: 2px;
+    }
+
+    /* ========== MAIN CONTENT ========== */
+    main {
+      background: #f7fafc;
+      padding-left: 210px;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 960px;
+    }
+
+    /* Section titles */
+    h3.page-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 1.5px;
+      margin: 0 0 40px;
+      padding: 22px 36px;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #00695c, #00897b) !important;
+      color: #fff !important;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 15px rgba(0, 105, 92, 0.2);
+    }
+
+    .section {
+      padding-bottom: 50px;
+      padding-top: 0;
+      position: relative;
+    }
+
+    .full-height {
+      min-height: 100vh;
+    }
+
+    /* ========== INTRO SECTION ========== */
+    #intro.section {
+      background: linear-gradient(135deg, #004d40 0%, #00695c 40%, #00897b 100%);
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    #intro .overlay {
+      background: rgba(0, 0, 0, 0.25);
+      position: absolute;
+      inset: 0;
+    }
+
+    #intro .container {
+      position: relative;
+      z-index: 2;
+      color: #fff;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    #intro .content {
+      margin-left: 0 !important;
+      margin-top: 0 !important;
+      padding: 0 20px;
+      max-width: 700px;
+    }
+
+    #intro h2 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #intro h2 .teal {
+      background: transparent !important;
+      color: #80cbc4 !important;
+      padding: 0;
+    }
+
+    #intro h5 {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      margin: 8px 0;
+      opacity: 0.95;
+    }
+
+    #intro .typing {
+      color: #b2dfdb !important;
+      font-weight: 500;
+    }
+
+    /* Social icons */
+    .social {
+      margin: 28px 0 20px;
+    }
+
+    .icon-btn {
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .icon-btn.linkedin {
+      background: #0077b5;
+    }
+
+    .icon-btn.github {
+      background: #24292e;
+    }
+
+    .icon-btn:hover {
+      transform: translateY(-4px) scale(1.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Buttons */
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .readme,
+    .contactme {
+      display: inline-block;
+      padding: 13px 32px;
+      font-weight: 600;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+
+    .readme {
+      background: #ffffff;
+      color: #00695c;
+      border: 2px solid #ffffff;
+    }
+
+    .readme:hover {
+      background: transparent;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .contactme {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+
+    .contactme:hover {
+      background: #ffffff;
+      color: #00695c;
+      transform: translateY(-2px);
+    }
+
+    /* ========== CARDS ========== */
+    .card {
+      border-radius: 12px !important;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      margin-bottom: 28px;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    .card .card-content {
+      padding: 28px 28px 24px !important;
+    }
+
+    .card .card-title {
+      font-size: 1.35rem !important;
+      font-weight: 600;
+      color: #00695c !important;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .card .role {
+      font-size: 0.95rem;
+      color: #718096;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .card ul {
+      margin: 12px 0 0;
+      padding-left: 20px;
+    }
+
+    .card ul li {
+      margin-bottom: 8px;
+      line-height: 1.55;
+      color: #4a5568;
+    }
+
+    /* Projects */
+    #projects .card.medium,
+    #projects .card {
+      height: auto !important;
+      min-height: 160px;
+    }
+
+    #projects .card p {
+      color: #4a5568;
+      margin-top: 10px;
+      font-size: 0.95rem;
+    }
+
+    /* Skills */
+    #skills .card-content h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #2d3748;
+      border-bottom: 2px solid #e0f2f1;
+      padding-bottom: 14px;
+      margin-bottom: 24px;
+    }
+
+    #skills .col {
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    #skills i.fa {
+      color: #00695c;
+      margin-bottom: 10px;
+      transition: transform 0.25s ease;
+    }
+
+    #skills .col:hover i.fa {
+      transform: scale(1.15);
+    }
+
+    #skills p {
+      font-weight: 500;
+      color: #2d3748;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    /* Education */
+    #education .card-title a {
+      font-weight: 600;
+    }
+
+    #education p {
+      margin: 6px 0;
+      color: #4a5568;
+    }
+
+    /* Contact */
+    #contact .container {
+      padding-top: 10px;
+    }
+
+    #contact p {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    #contact .btn-floating {
+      background: #00695c !important;
+      box-shadow: 0 4px 12px rgba(0, 105, 92, 0.3);
+      transition: all 0.25s ease;
+    }
+
+    #contact .btn-floating:hover {
+      background: #004d40 !important;
+      transform: scale(1.08);
+    }
+
+    #contact a.hoverline {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 2px;
+      font-weight: 500;
+      transition: border-color 0.2s ease;
+    }
+
+    #contact a.hoverline:hover {
+      border-bottom-color: #00695c;
+    }
+
+    /* Footer */
+    footer.page-footer {
+      margin-left: 210px;
+      background: linear-gradient(90deg, #004d40, #00695c);
+      padding: 22px 0;
+      text-align: center;
+    }
+
+    footer.page-footer p {
+      margin: 4px 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+    }
+
+    footer.page-footer a {
+      color: #b2dfdb;
+      text-decoration: underline;
+    }
+
+    /* About text */
+    #about .flow-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #4a5568;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      main {
+        padding-left: 0;
+        padding-top: 60px;
+      }
+
+      footer.page-footer {
+        margin-left: 0;
+      }
+
+      h3.page-title {
+        margin-top: 0;
+        border-radius: 0;
+        padding: 18px 24px;
+        font-size: 1.3rem;
+      }
+
+      #intro h2 {
+        font-size: 2.1rem;
+      }
+
+      #intro .content {
+        padding: 20px 16px;
+      }
+
+      .container {
+        width: 94%;
+      }
+
+      ul.side-nav {
+        width: 260px !important;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      #intro h2 {
+        font-size: 1.7rem;
+      }
+
+      #intro h5 {
+        font-size: 1.05rem;
+      }
+
+      .readme,
+      .contactme {
+        width: 100%;
+        max-width: 280px;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      #contact p {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      #contact .btn-floating {
+        margin: 0;
+      }
+
+      h3.page-title {
+        font-size: 1.2rem;
+        padding: 16px 20px;
+      }
+
+      .card .card-content {
+        padding: 22px 20px !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
+  <!-- Desktop Side Nav -->
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section table-of-contents">
-
       <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=Hammad" class="circle img-responsive profile-pic" alt="Random avatar of Hammad Ahmed Afridi">
+        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro" class="brand-logo">
+          <img src="https://api.dicebear.com/9.x/avataaars/svg?seed=HammadAfridi&backgroundColor=b6e3f4,c0aede,d1d4f9&radius=50"
+               class="profile-pic" alt="Hammad Ahmed Afridi">
         </a>
       </li>
 
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark">
+          <i class="mdi-social-person small"></i><span>About</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+        <a aria-label="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark">
+          <i class="mdi-action-trending-up small"></i><span>Experience</span>
+        </a>
       </li>
-
       <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark">
+          <i class="mdi-av-my-library-books small"></i><span>Projects</span>
+        </a>
       </li>
-
       <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark">
+          <i class="mdi-action-assessment small"></i><span>Skills</span>
+        </a>
       </li>
-      
       <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark">
+          <i class="mdi-social-school small"></i><span>Education</span>
+        </a>
       </li>
-
       <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark">
+          <i class="mdi-content-mail small"></i><span>Contact</span>
+        </a>
       </li>
-
     </ul>
   </nav>
 
-  <!-- Nav class 2 -->
+  <!-- Mobile Top Nav -->
   <nav class="hide-on-large-only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out" class="button-collapse">
+      <i class="mdi-navigation-menu"></i>
+    </a>
     <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Hammad Ahmed Afridi</a><span class="black-text">Information Security Student</span>
+      <a id="name" aria-label="Navigate to the beginning of the page" href="#intro">Hammad Ahmed Afridi</a>
+      <span>Information Security Student</span>
     </div>
   </nav>
 
-  <!-- Nav class 3 -->
+  <!-- Mobile Side Nav -->
   <nav class="hide-on-large-only">
     <ul id="slide-out" class="side-nav">
       <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
+        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark">
+          <i class="mdi-social-person small"></i><span>About</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
+        <a aria-label="Navigate to the Experience section" href="#experience" class="waves-effect waves-dark">
+          <i class="mdi-action-trending-up small"></i><span>Experience</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
+        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark">
+          <i class="mdi-av-my-library-books small"></i><span>Projects</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
+        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark">
+          <i class="mdi-action-assessment small"></i><span>Skills</span>
+        </a>
       </li>
       <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
+        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark">
+          <i class="mdi-social-school small"></i><span>Education</span>
+        </a>
+      </li>
+      <li class="bold">
+        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark">
+          <i class="mdi-content-mail small"></i><span>Contact</span>
+        </a>
       </li>
     </ul>
   </nav>
 
-  <!-- Main Content-->
+  <!-- Main Content -->
   <main>
-    <!-- First Section: Heading lines and image -->
+    <!-- Intro -->
     <section id="intro" class="section scrollspy full-height">
       <div class="overlay"></div>
       <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="teal">Hammad Ahmed Afridi.</span></h2>
-              <h5 style="color:#fff">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5>BE Information Security student at MCS, NUST, currently in the 3rd semester.</h5>
-            </div>
-            <div class="social">
-              <a href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434" target="_blank" rel="noopener noreferrer" aria-label="Hammad Ahmed Afridi on LinkedIn">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/Hammad-Ahmed-Afridi" target="_blank" rel="noopener noreferrer" aria-label="Hammad Ahmed Afridi on GitHub">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-            </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
+        <div class="content section-padding valign">
+          <div class="caption">
+            <h2>Hi, I'm <span class="teal">Hammad Ahmed Afridi.</span></h2>
+            <h5>I am <span class="typing"></span></h5>
+            <h5>BE Information Security student at MCS, NUST, currently in the 3rd semester.</h5>
+          </div>
+
+          <div class="social">
+            <a href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434" target="_blank" rel="noopener noreferrer"
+               aria-label="Hammad Ahmed Afridi on LinkedIn">
+              <button class="icon-btn linkedin"><i class="fa fa-linkedin"></i></button>
+            </a>
+            <a href="https://github.com/Hammad-Ahmed-Afridi" target="_blank" rel="noopener noreferrer"
+               aria-label="Hammad Ahmed Afridi on GitHub">
+              <button class="icon-btn github"><i class="fa fa-github"></i></button>
+            </a>
+          </div>
+
+          <div class="buttons">
+            <a href="#about" class="readme">Read More</a>
+            <a href="#contact" class="contactme">Contact Me</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Second Section: About -->
+    <!-- About -->
     <section id="about" class="section scrollspy">
       <h3 class="page-title white-text teal">About</h3>
       <div class="container flow-text">
@@ -193,15 +711,14 @@
       </div>
     </section>
 
-
-    <!-- Third Section: Experience -->
+    <!-- Experience -->
     <section id="experience" class="section scrollspy">
       <h3 class="page-title white-text teal">Experience</h3>
       <div class="container">
         <div class="card">
           <div class="card-content">
             <span class="card-title teal-text">Cybersecurity and Information Security Labs</span>
-            <div class="role brown-text text-darken-2">TryHackMe and Independent Practice</div>
+            <div class="role">TryHackMe and Independent Practice</div>
             <ul>
               <li>Completed practical labs across security engineering, SOC operations, DevSecOps, penetration testing, and AI security.</li>
               <li>Practiced network traffic analysis and security monitoring with Wireshark, Wazuh, and Suricata.</li>
@@ -212,51 +729,133 @@
       </div>
     </section>
 
-    <!-- Fourth Section: Projects -->
+    <!-- Projects -->
     <section id="projects" class="section scrollspy">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row">
-          <div class="col s12 m6 l4"><div class="card medium"><div class="card-content"><span class="card-title teal-text">Lab 01: Machine and Kali Setup</span><p>Examined hardware, virtualization, and Linux through VMware and Sysinternals.</p></div></div></div>
-          <div class="col s12 m6 l4"><div class="card medium"><div class="card-content"><span class="card-title teal-text">Lab 02: CyberChef Data Analysis</span><p>Practiced encoding, file detection, hashing, and data format conversion.</p></div></div></div>
-          <div class="col s12 m6 l4"><div class="card medium"><div class="card-content"><span class="card-title teal-text">Lab 03: Windows and WSL2 Setup</span><p>Configured Windows, disk partitions, firmware settings, and Ubuntu through WSL2.</p></div></div></div>
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-content">
+                <span class="card-title teal-text">Lab 01: Machine and Kali Setup</span>
+                <p>Examined hardware, virtualization, and Linux through VMware and Sysinternals.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-content">
+                <span class="card-title teal-text">Lab 02: CyberChef Data Analysis</span>
+                <p>Practiced encoding, file detection, hashing, and data format conversion.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4">
+            <div class="card medium">
+              <div class="card-content">
+                <span class="card-title teal-text">Lab 03: Windows and WSL2 Setup</span>
+                <p>Configured Windows, disk partitions, firmware settings, and Ubuntu through WSL2.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>    <!-- Fifth Section: Skills -->
+    </section>
+
+    <!-- Skills -->
     <section id="skills" class="section scrollspy">
       <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container"><div class="card"><div class="card-content"><h4 class="brown-text light">Technical Skills</h4><div class="row text-center"><div class="col s6 m3"><i class="fa fa-linux fa-3x"></i><p>Linux</p></div><div class="col s6 m3"><i class="fa fa-git fa-3x"></i><p>Git</p></div><div class="col s6 m3"><i class="fa fa-wifi fa-3x"></i><p>Wireshark</p></div><div class="col s6 m3"><i class="fa fa-code fa-3x"></i><p>Python</p></div></div></div></div></div>
-    </section>    <!-- Seventh Section: Education -->
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <h4 class="brown-text light">Technical Skills</h4>
+            <div class="row text-center">
+              <div class="col s6 m3">
+                <i class="fa fa-linux fa-3x"></i>
+                <p>Linux</p>
+              </div>
+              <div class="col s6 m3">
+                <i class="fa fa-git fa-3x"></i>
+                <p>Git</p>
+              </div>
+              <div class="col s6 m3">
+                <i class="fa fa-wifi fa-3x"></i>
+                <p>Wireshark</p>
+              </div>
+              <div class="col s6 m3">
+                <i class="fa fa-code fa-3x"></i>
+                <p>Python</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
     <section id="education" class="section scrollspy">
       <h3 class="page-title white-text teal">Education</h3>
-      <div class="container"><div class="row"><div class="col s12 m8 l8"><div class="card"><div class="card-content"><span class="card-title"><a href="https://nust.edu.pk/" target="_blank" class="teal-text hoverline">National University of Sciences and Technology (NUST)</a></span><p class="brown-text">MCS, Pakistan</p><p><b>Degree:</b> BE Information Security<br><b>Status:</b> 3rd Semester (Ongoing)</p></div></div></div></div></div>
-    </section>    <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m10 l8">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">
+                  <a href="https://nust.edu.pk/" target="_blank" class="teal-text hoverline">
+                    National University of Sciences and Technology (NUST)
+                  </a>
+                </span>
+                <p class="brown-text">MCS, Pakistan</p>
+                <p>
+                  <b>Degree:</b> BE Information Security<br>
+                  <b>Status:</b> 3rd Semester (Ongoing)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section scrollspy">
       <h3 class="page-title white-text teal">Contact</h3>
       <div class="container">
         <p>
-          <a aria-label="Email Hammad" href="mailto:hafridi.beis25mcs@student.nust.edu.pk" target="_blank" data-position="top"
-            data-tooltip="Email Hammad" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i></a><a aria-label="Email Hammad" href="mailto:hafridi.beis25mcs@student.nust.edu.pk"
-              class="hoverline">hafridi.beis25mcs@student.nust.edu.pk</a>
+          <a aria-label="Email Hammad" href="mailto:hafridi.beis25mcs@student.nust.edu.pk"
+             class="btn-floating btn-large waves-effect waves-light tooltipped" data-position="top" data-tooltip="Email Hammad">
+            <i class="fa fa-envelope"></i>
+          </a>
+          <a aria-label="Email Hammad" href="mailto:hafridi.beis25mcs@student.nust.edu.pk" class="hoverline">
+            hafridi.beis25mcs@student.nust.edu.pk
+          </a>
         </p>
         <p>
-          <a aria-label="View Hammad on LinkedIn" href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434" target="_blank" rel="noopener noreferrer"
-            data-position="top" data-tooltip="View Hammad on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i></a><a aria-label="Hammad on LinkedIn" href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434"
-              class="hoverline" target="_blank" rel="noopener noreferrer">linkedin.com/in/hammad-ahmed-afridi-b82923434</a>
+          <a aria-label="View Hammad on LinkedIn" href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-floating btn-large waves-effect waves-light tooltipped" data-position="top" data-tooltip="View on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a aria-label="Hammad on LinkedIn" href="https://www.linkedin.com/in/hammad-ahmed-afridi-b82923434"
+             class="hoverline" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/hammad-ahmed-afridi-b82923434
+          </a>
         </p>
         <p>
-          <a aria-label="View Hammad on GitHub" href="https://github.com/Hammad-Ahmed-Afridi" target="_blank" rel="noopener noreferrer"
-            data-position="top" data-tooltip="View Hammad on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-github"></i></a><a aria-label="Hammad on GitHub" href="https://github.com/Hammad-Ahmed-Afridi"
-              class="hoverline" target="_blank" rel="noopener noreferrer">github.com/Hammad-Ahmed-Afridi</a>
+          <a aria-label="View Hammad on GitHub" href="https://github.com/Hammad-Ahmed-Afridi"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-floating btn-large waves-effect waves-light tooltipped" data-position="top" data-tooltip="View on GitHub">
+            <i class="fa fa-github"></i>
+          </a>
+          <a aria-label="Hammad on GitHub" href="https://github.com/Hammad-Ahmed-Afridi"
+             class="hoverline" target="_blank" rel="noopener noreferrer">
+            github.com/Hammad-Ahmed-Afridi
+          </a>
         </p>
       </div>
     </section>
   </main>
+
   <footer class="page-footer">
     <div class="container">
       <p>&copy; 2026 Hammad Ahmed Afridi</p>
@@ -264,34 +863,29 @@
     </div>
   </footer>
 
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["Information Security", "Network Analysis", "Cybersecurity Learner"],
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed('.typing', {
+      strings: ["a cybersecurity student", "a network analysis enthusiast", "an information security student"],
       loop: true,
       typeSpeed: 80,
       backSpeed: 40
     });
   </script>
 
-
-  <!-- jQuery-->
+  <!-- jQuery + Materialize -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-  <!-- Materialize - Compiled and minified JavaScript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
   <script>
-    // Materialize - Initializers
     $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
+      $(".scrollspy").scrollSpy();
       $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
+        menuWidth: 260,
+        edge: "left",
+        closeOnClick: true
+      });
+    });
   </script>
 </body>
 
